@@ -1,0 +1,67 @@
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@200;400&family=Ubuntu:wght@300&display=swap');
+  .Poppins{ 
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100;300&family=Orbitron:wght@900&family=Playfair+Display&family=Poppins:wght@200;400&family=Ubuntu:wght@300&display=swap');
+ 
+  .MainNav {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.686); /* Adjust the values as needed */
+  }
+  .MobileNav{
+    background: #f2709c;  
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c); 
+    background: linear-gradient(to right, #f1b91098, #2e3190f3); 
+    border-radius: 15px;
+    padding: 10px;
+    top: 15px;
+    font-weight: 600px;
+    backdrop-filter: blur(4.5px);
+  } 
+  .BannerHeaderText {
+    color: #FFF;
+    text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Playfair;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .footer{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .orbitron{
+    font-family: 'Orbitron', sans-serif;
+  }
+  .pricing {
+    background: #f2709c;  
+    background: -webkit-linear-gradient(to right, #ff9472, #f2709c); 
+    background: linear-gradient(to right, #f1b9101e, #2e319041); 
+    backdrop-filter: blur(4.5px);
+  }
+  textarea{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(0, 0, 0, 0.292);
+    border-radius: 3px;
+    padding: 10px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .topBannerAccomodation {
+    background-image: url("./Assets/room.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bannerOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.347);
+}

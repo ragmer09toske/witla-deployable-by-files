@@ -1,0 +1,72 @@
+.pricing-header{margin-bottom:48px}
+/* .pricing-tables-wrap{display:flex;flex-wrap:wrap;justify-content:center;margin-right:-12px;margin-left:-12px} */
+.pricing-tables-wrap:first-child{margin-top:-12px}.pricing-tables-wrap:last-child{margin-bottom:-12px}
+.pricing-table{position:relative;padding:12px;width:368px;max-width:368px;flex-grow:1}
+.pricing-table-header,.pricing-table-features-title,.pricing-table-features li{border-bottom:1px solid rgba(138,148,167,0.24)}
+.pricing-table-inner{position:relative;display:flex;flex-wrap:wrap;background:#2C3039;padding:24px;height:100%}
+.pricing-table-inner>*{position:relative;width:100%}.pricing-table-inner::before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;box-shadow:0 24px 48px rgba(21,24,29,0.24);mix-blend-mode:multiply}
+.pricing-table-price-currency{color:#8A94A7}.pricing-table-features-title{color:#fff;font-weight:700}
+.pricing-table-features li{display:flex;align-items:center;padding:14px 0}
+.pricing-table-features li::before{content:'';width:16px;height:12px;margin-right:16px;background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTUuNiA2LjRMMS42IDQgMCA1LjYgNS42IDEyIDE2IDEuNiAxNC40IDB6IiBmaWxsPSIjMDJDQkIxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);background-repeat:no-repeat}
+.pricing-table-cta{align-self:flex-end}@media (min-width: 641px){.pricing .section-paragraph{padding-left:90px;padding-right:90px}
+.pricing-header{margin-bottom:52px}}
+.text-xs{font-size:16px;line-height:24px;letter-spacing:-0.1px}
+.h2{
+    font-size: xx-large;
+    font-weight: 900;
+}
+.h1{
+    font-size: xx-large;
+    font-weight: 900;
+    color: #fff;
+}
+.text-xs {
+    font-weight: bold;
+
+}
+ul{
+    color: #8A94A7;
+    font-size: xx-large;
+}
+li{
+    font-size: small;
+}
+.button{display:inline-flex;font-size:14px;letter-spacing:0px;font-weight:600;line-height:16px;text-decoration:none !important;text-transform:uppercase;background-color:#242830;color:#fff !important;border:none;border-radius:2px;cursor:pointer;justify-content:center;padding:16px 32px;height:48px;text-align:center;white-space:nowrap}
+.button::before{border-radius:2px}.button-sm{padding:8px 24px;height:32px}
+.button-primary{background:#097dea;background:linear-gradient(65deg, #0270D7 0, #0F8AFD 100%)}
+.button{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .pricing-table::before{
+        content:'';
+        position:absolute;left:50%;
+        width:200%;max-width:200%;
+        height:435px;background-repeat:no-repeat;
+        background-position:center;
+        background-size:100%;
+        bottom:18.8%;
+        transform:translateX(-50%);
+        background-image:url("../images/pricing-illustration.svg");
+       
+
+}}
+.pricing-table{
+    display: flex;
+    justify-content: center;
+}
+/* Create a three-column grid layout */
+.pricing-table-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
+    grid-gap: 10px; /* Adjust the gap between items as needed */
+  }
+  
+  /* Style each list item */
+  .pricing-table-features li {
+    padding: 10px; /* Add padding to space out the content */
+    text-align: center; /* Center-align text within each item */
+  }
+  

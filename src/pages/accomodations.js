@@ -3,14 +3,34 @@ import { DefaultNav } from '../components/Navbars/DefaultNav'
 import { Banner } from '../components/banner.js'
 import { Box, Card } from '@mui/material'
 import mmelesi from "../Assets/melesi.jpg"
+import salisha from "../Assets/salisha.jpg"
+import cozy from "../Assets/cosy.jpg"
+import Violet from "../Assets/violet.jpeg"
+import scenery from "../Assets/scenery.jpg"
 import useIsDesktop from '../hooks/Device'
 import { Mail, Phone, Web } from '@mui/icons-material'
+import qr from "../Assets/qr.jpeg"
 export const Accomodation = ({numbers,email,name}) => {
   const isDesktop = useIsDesktop()
   return (
     <div>
         <DefaultNav />
         <Banner />
+        <Box>
+          <Box sx={{
+            display: "flex",
+            justifyContent: "center"
+          }}>
+            <p>QR Quote for accommodation</p>
+          </Box>
+          <Box sx={{
+            pt: 2,
+            display: "flex",
+            justifyContent: "center"
+          }}>
+            <img src={qr} alt='qr-code' width={170}/>
+          </Box>
+        </Box>
         <Box sx={{p:5}}>
          <Card sx={{
           width: "100%",
@@ -44,7 +64,7 @@ export const Accomodation = ({numbers,email,name}) => {
               gap: 1
             }}>
               <Box sx={{borderRadius: 2}}>
-                {isDesktop ? <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
+                {isDesktop ? <img src={mmelesi} width={180} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
               </Box>
               <Box sx={{width: "100%"}}>
                   <h3>Mmelesi Lodge</h3>
@@ -73,7 +93,7 @@ export const Accomodation = ({numbers,email,name}) => {
                     </Box>
                     <Box>
                       <h6>
-                        <a href='mmelisilodge.co.ls'>link</a>
+                        <a href='https://www.mmelisilodge.co.ls'>link</a>
                       </h6>
                     </Box>
                   </Box>
@@ -90,7 +110,7 @@ export const Accomodation = ({numbers,email,name}) => {
               gap: 1
             }}>
               <Box sx={{borderRadius: 2}}>
-                {isDesktop ? <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
+                {isDesktop ? <img src={salisha} width={180} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={salisha} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
               </Box>
               <Box sx={{width: "100%"}}>
                   <h3>SalishaBnB</h3>
@@ -103,7 +123,7 @@ export const Accomodation = ({numbers,email,name}) => {
                     </Box>
                     <Box>
                       <h6>
-                        <a href='www.bedandbreakfast.eu'>link</a>
+                        <a href='https://www.bedandbreakfast.eu'>link</a>
                       </h6>
                     </Box>
                   </Box>
@@ -120,7 +140,7 @@ export const Accomodation = ({numbers,email,name}) => {
               gap: 1
             }}>
               <Box sx={{borderRadius: 2}}>
-                {isDesktop ? <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
+                {isDesktop ? <img src={Violet} width={180} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={Violet} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
               </Box>
               <Box sx={{width: "100%"}}>
                   <h3>The Violet BnB</h3>
@@ -133,7 +153,7 @@ export const Accomodation = ({numbers,email,name}) => {
                     </Box>
                     <Box>
                       <h6>
-                        <a href='www.booking.com'>link</a>
+                        <a href='https://www.booking.com'>link</a>
                       </h6>
                     </Box>
                   </Box>
@@ -150,7 +170,7 @@ export const Accomodation = ({numbers,email,name}) => {
               gap: 1
             }}>
               <Box sx={{borderRadius: 2}}>
-                {isDesktop ? <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
+                {isDesktop ? <img src={cozy} width={180} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={cozy} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
               </Box>
               <Box sx={{width: "100%"}}>
                   <h3>Cosy Gardens BnB</h3>
@@ -163,7 +183,7 @@ export const Accomodation = ({numbers,email,name}) => {
                     </Box>
                     <Box>
                       <h6>
-                        <a href="www.bookings.com">link</a>
+                        <a href="https://www.bookings.com">link</a>
                       </h6>
                     </Box>
                   </Box>
@@ -181,7 +201,7 @@ export const Accomodation = ({numbers,email,name}) => {
               gap: 1
             }}>
               <Box sx={{borderRadius: 2}}>
-                {isDesktop ? <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={mmelesi} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
+                {isDesktop ? <img src={scenery} width={180} style={{borderRadius: 2}} alt='Mmelesi' /> : <img src={scenery} style={{borderRadius: 2}} alt='Mmelesi' width={120}/>}
               </Box>
               <Box sx={{width: "100%"}}>
                   <h3>Scenery </h3>
@@ -210,7 +230,7 @@ export const Accomodation = ({numbers,email,name}) => {
                     </Box>
                     <Box>
                       <h6>
-                        <a href='www.scenery.co.ls'>link</a>
+                        <a href='https://www.scenery.co.ls'>link</a>
                       </h6>
                     </Box>
                   </Box>

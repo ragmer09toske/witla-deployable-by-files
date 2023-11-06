@@ -3,66 +3,25 @@ import { DefaultNav } from '../components/Navbars/DefaultNav'
 import { Banner } from '../components/banner.js'
 import { Box, Divider } from '@mui/material'
 import { Footer } from '../components/footer'
-import MSU from "../Assets/lekhowa.png"
 import useIsDesktop from '../hooks/Device'
-import { useNavigate } from 'react-router-dom'
 import { PictureBanner } from '../components/pictureBanner'
+import  Walpaper from '../Assets/Ndlamo.jpeg'
+import  pictureBannerWalpaper from '../Assets/KomeCave.jpg'
 
 export const Lesotho = () => {
   const isDesktop = useIsDesktop()
-  const navigate = useNavigate()
-  const handleSummit = () => {
-    navigate("/summit")
-  }
   return (
     <Box>
         <DefaultNav />
-        <Banner />
+        <Banner  wallpaper={Walpaper}/>
         <Box>
-        <div style={isDesktop ? { position: 'relative', height:"200px", width:"100%"} : { position: 'relative', height:"100px", width:"100%"}}>
-                <img
-                    src={MSU}
-                    alt="Background"
-                    style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    position: 'absolute',
-                    zIndex: -1,
-                    top: 0,
-                    left: 0,
-                    }}
-                />
-                <Box
-                    sx={
-                    isDesktop ?    
-                    {
-                    backgroundColor: 'rgba(0, 0, 255, 0.19)', // Adjust the color and opacity
-                    padding: '20px', // Add any other styling you need
-                    height:"80%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center"
-                    }:
-                    {
-                    backgroundColor: 'rgba(0, 0, 255, 0.19)', // Adjust the color and opacity
-                    padding: '20px', // Add any other styling you need
-                    height:"60%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center"
-                    }
-                    }
-                >
-                    <h4 style={isDesktop ? {color:'white', fontSize:50} : {color:'white', fontSize:30}}>ABOUT LESOTHO</h4>
-                </Box>
-            </div>
+        <PictureBanner title={"ABOUT LESOTHO"} bannerPicture={pictureBannerWalpaper}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
                 <p>
                  <b>Indroduction</b>
                  <br/>
                  <br/>
-                 Lesotho, often referred to as "The Kingdom in the Sky," is a landlocked country situated in the southern part of Africa. Known for its breathtaking mountain ranges, diverse flora and fauna, and rich cultural heritage, Lesotho offers a plethora of activities and experiences for adventurers, cultural enthusiasts, and nature lovers.
+                 Lesotho is also known  as Kingdom in the Sky  because anywhere you are in Lesotho it's elevation nests at over 1000m above sea level and this makes it the highest lowest point of altitude in the whole world. 
                 </p>
             </Box>
 

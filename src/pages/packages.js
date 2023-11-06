@@ -5,17 +5,18 @@ import useIsDesktop from '../hooks/Device'
 import { DefaultNav } from '../components/Navbars/DefaultNav'
 import { Banner } from '../components/banner.js'
 import { Footer } from '../components/footer'
+import  Walpaper from '../Assets/Wallpapers/nucleus-afriski.jpg'
 
 export const Packages = () => {
     const isDesktop = useIsDesktop()
     const packageList = [
       {
         package:"International", 
-        price: '$ 120'
+        price: '$ 30'
       },
       {
         package:"Local", 
-        price: 'M 1500'
+        price: 'M 500'
       },
     ]
     const packageList2 = [
@@ -32,10 +33,24 @@ export const Packages = () => {
         price: 'M 1500.00'
       },
     ]
+    const GalaDinnerList = [
+        {
+          package:"General ticket", 
+          price: 'M500.00'
+        },
+        {
+          package:"Vip ticket", 
+          price: 'M1, 000.00'
+        },
+        {
+          package:"Corporate tickets (10 seats)", 
+          price: 'M14, 000.00'
+        },
+      ]
     return (
     <Box>
         <DefaultNav />
-        <Banner />
+        <Banner  wallpaper={Walpaper}/>
         <Box sx={{
             p: 2,
         }}
@@ -53,6 +68,7 @@ export const Packages = () => {
                 <b>Conference Packages And Pricing</b>
                 </h2>
             </Box>
+            <Solid header="Gala dinner Ticket prices" packageList={GalaDinnerList}/>
             <Solid header="ATTADENCE FEES" packageList={packageList}/>
             <Card sx={{
                 background: "#2C3039",
@@ -83,7 +99,7 @@ export const Packages = () => {
                 <tbody>
                 <tr>
                     <td>General - No Branding</td>
-                    <td>M 500</td>
+                    <td>`M 500`</td>
                     <td>$ 53</td>
                 </tr>
                 <br/>

@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Box} from '@mui/material'
 import React from 'react'
 import logo from "../../Assets/Wallpapers/Witla.png"    
 import logos from "../../Assets/steakholders.png"
@@ -18,7 +18,7 @@ export const BannerNav = () => {
       }}
         className='orbitron'
     >
-        <Box>
+        <Box onClick={toHome}>
             <img src={logo} alt="" width={100}></img>
         </Box>
         <Box sx={{color: "#F1B910"}}>
@@ -27,7 +27,7 @@ export const BannerNav = () => {
               display:"flex",
               flexDirection: "column",
             }}>
-              <p style={{fontWeight: 900, fontSize:14}} onClick={toHome} className='orbitron'>MASERU, LESOTHO | CONVENTION CENTER</p>
+              <p style={{fontWeight: 900, fontSize:14}} className='orbitron'>MASERU, LESOTHO | CONVENTION CENTER</p>
               <Box sx={{mt: -3}}>
                 <p style={{fontWeight: 900, fontSize:14, color: "#bc0026"}} className='orbitron'>Event dates: 27-29 Nov</p>
               </Box>

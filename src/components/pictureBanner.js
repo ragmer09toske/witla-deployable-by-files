@@ -2,12 +2,12 @@ import { Box } from "@mui/material"
 import MSU from "../Assets/lekhowa.png"
 import useIsDesktop from '../hooks/Device'
 
-export const PictureBanner = ({title}) => {
+export const PictureBanner = ({title, bannerPicture}) => {
   const isDesktop = useIsDesktop()
   return (
     <div style={isDesktop ? { position: 'relative', height:"200px", width:"100%"} : { position: 'relative', height:"100px", width:"100%"}}>
                 <img
-                    src={MSU}
+                    src={!bannerPicture ? (MSU) : (bannerPicture)}
                     alt="Background"
                     style={{
                     width: '100%',

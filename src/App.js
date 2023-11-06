@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Box, ThemeProvider } from '@mui/material';
+import { Box } from '@mui/material';
 import { Welcome } from './pages';
 import { Witla } from './pages/witla';
 import { Lesotho } from './pages/lesotho';

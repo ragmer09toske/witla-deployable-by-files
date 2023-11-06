@@ -4,7 +4,10 @@ import MSU from "../../Assets/lekhowa.png"
 import exhibition from "../../Assets/exhibitions.jpg"
 import komecaves from "../../Assets/msu.JPG"
 import useIsDesktop from '../../hooks/Device'
-import { unstable_HistoryRouter, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import Slideshow from '../../components/banner.js/images'
+import { A4Poster } from '../../components/A4Poster'
+
 export const Home = () => {
   const isDesktop = useIsDesktop()
   const navigate = useNavigate()
@@ -38,6 +41,8 @@ export const Home = () => {
   return (
     <Box>
         <Box>
+        <A4Poster/>
+        <Slideshow />
         <div style={isDesktop ? { position: 'relative', height:"200px", width:"100%"} : { position: 'relative', height:"100px", width:"100%"}}>
                 <img
                     src={MSU}

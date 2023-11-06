@@ -1,7 +1,8 @@
 import React from 'react'
 import { DefaultNav } from '../components/Navbars/DefaultNav'
 import { Banner } from '../components/banner.js'
-import { Box, Button, TextField } from '@mui/material'
+import { Box, Button, Divider, TextField } from '@mui/material'
+import { Footer } from '../components/footer'
 
 export const ContactUs = () => {
   return (
@@ -9,7 +10,7 @@ export const ContactUs = () => {
         <DefaultNav />
         <Banner />
         <Box className="pricing" sx={{p:5}}>
-          <form action="https://formsubmit.co/nucleusdevs@gmail.com" method="POST">
+          <form action="https://info@witla.co.ls" method="POST">
             <Box sx={{
               display: "flex",
               justifyContent: "center",
@@ -26,6 +27,10 @@ export const ContactUs = () => {
             </Button>
           </form>
         </Box>
+        <Divider/>
+        <Divider/>
+        <br/>
+        <Footer />
     </div>
   )
 }

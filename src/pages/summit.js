@@ -1,12 +1,19 @@
 import React from 'react'
 import { DefaultNav } from '../components/Navbars/DefaultNav'
 import { Banner } from '../components/banner.js'
-import { Box, Card, Divider } from '@mui/material'
+import { Box, Divider } from '@mui/material'
 import useIsDesktop from '../hooks/Device'
-import { Solid } from '../components/solid'
-import MSU from "../Assets/lekhowa.png"
+import Mohale from "../Assets/mohale.jpeg"
+import LandScape from "../Assets/landScape.jpeg"
 import { Footer } from '../components/footer'
 import { PictureBanner } from '../components/pictureBanner'
+import  Walpaper from '../Assets/mokhibo.jpeg'
+import  pictureBannerWalpaper from '../Assets/pere.jpeg'
+import  River from '../Assets/river.jpeg'
+import  sunset from '../Assets/sunset.jpeg'
+import  afriski from '../Assets/Wallpapers/nucleus-afriski.jpg'
+import  dam from '../Assets/dam.jpeg'
+import  houses from '../Assets/houses.jpeg'
 
 export const Summit = () => {
   const stakeHolders = [
@@ -36,46 +43,9 @@ export const Summit = () => {
   return (
     <Box>
         <DefaultNav />
-        <Banner />
+        <Banner  wallpaper={Walpaper}/>
         <Box>
-        <div style={isDesktop ? { position: 'relative', height:"200px", width:"100%"} : { position: 'relative', height:"100px", width:"100%"}}>
-                <img
-                    src={MSU}
-                    alt="Background"
-                    style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    position: 'absolute',
-                    zIndex: -1,
-                    top: 0,
-                    left: 0,
-                    }}
-                />
-                <Box
-                    sx={
-                    isDesktop ?    
-                    {
-                    backgroundColor: 'rgba(0, 0, 255, 0.19)', // Adjust the color and opacity
-                    padding: '20px', // Add any other styling you need
-                    height:"80%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center"
-                    }:
-                    {
-                    backgroundColor: 'rgba(0, 0, 255, 0.19)', // Adjust the color and opacity
-                    padding: '20px', // Add any other styling you need
-                    height:"60%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center"
-                    }
-                    }
-                >
-                    <h4 style={isDesktop ? {color:'white', fontSize:50} : {color:'white', fontSize:30}}>About The Conference</h4>
-                </Box>
-            </div>
+        <PictureBanner title={"ABOUT LESOTHO"} bannerPicture={pictureBannerWalpaper}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
                 <p>
                  <b>About the Summit</b>
@@ -84,7 +54,7 @@ export const Summit = () => {
                  WITSA in partnership with WITLA and the Government of Lesotho through its agency the Lesotho Tourism Development Corporation (LTDC) will be hosting its 2nd Edition of the Women in Tourism Annual Summit and Expo. The 2023 three Days Summit is scheduled to take place in Maseru, Lesotho from the 27th to 29th of November 2023 at the ‘Manthabiseng Convention Centre. 
                 </p>
             </Box>
-            <PictureBanner />
+            <PictureBanner bannerPicture={LandScape}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
               <p>
               The 3 days summit will bring together leaders from SADC, the entire Africa and beyond; development partners; intergovernmental organizations; private sector; academia; civil society organizations; women and youth to design and catalyze actions and solutions for tourism development by providing a platform to deliberate on the nexus between technology, women and youth empowerment, entrepreneurship, business development, mentorship and the need to push for increased investment in tourism development in Africa. These will be achieved through Stakeholders’ Engagement Sessions, Leadership Debates, Regional Women in Tourism Fashion Show, Plenary Sessions, B2B, Exhibitions, Excursions, Culture and Heritage Celebration to name the few.
@@ -96,14 +66,14 @@ export const Summit = () => {
               The Summit is envisioned to host approximately 1,500 delegates and will to be attended by Women in Business, Local & International Buyers, Exhibitors, Dignitaries, Honourable Ministers of (Tourism, Trade, Gender, etc.) Investors, Business Leaders, Tourism Boards Directors, SADC Secretariat Directors, AU-APRM Executives, Corporate Executives and Managers, Financial Institutions, Academia's, etc.
               </p>
             </Box>
-            <PictureBanner />
+            <PictureBanner bannerPicture={Mohale}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
               <p>
               In partnership with B-Leisure Africa, the organization that focuses on Business & Leisure Inter-Africa Trade & Investment programmes, the summit will host a VIP Business Lounge which will focus on B2B Meetings, Investment Projects Information Sharing Session and investment site seeing as a side event.
               </p>
             </Box>
 
-            <PictureBanner title={"Objectives of the Summit are to"}/>
+            <PictureBanner title={"Objectives of the Summit"} bannerPicture={River}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
                  <ul>
                   <li>Gather key Tourism Stakeholders together and discuss key issues around tourism business development with a view to empower Women and Youth in tourism.</li>
@@ -113,7 +83,7 @@ export const Summit = () => {
                   <li>Create awareness on SADC Industrialisation programme with the focus on women in the southern- African Region.</li>
                  </ul>
             </Box>
-            <PictureBanner title={"The Event Format"}/>
+            <PictureBanner title={"The Event Format"} bannerPicture={sunset}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:0, pb:3,fontSize:30, textAlign:"justify"} : {p:3, pt:1, textAlign:"justify"}}>
               <p>
               <b>The Summit</b>
@@ -124,7 +94,7 @@ export const Summit = () => {
               As a derivative of the objectives, the summit seeks to gather professionals across a range of business sectors to jointly initiate important, inspiring new ideas that benefit the entire business fratenity. This will be a platform for experienced professionals, entrepreneurs and budding business operators  who seek  business success and would like to meet like-minded peers in order to discuss how best they can  achieve their sustainable business goals. This part of the event will include presentations, discussions panels, interactive breakout sessions, group conversations, networking sessions, women lead project site tours, investment sites seeing and VIP lounge. 
               </p>
             </Box>
-            <PictureBanner title={"Event Topics"}/>
+            <PictureBanner title={"Event Topics"} bannerPicture={afriski}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
                  <ul>
                   <li>Community Based Tourism, Entertainment Tourism </li>
@@ -139,7 +109,7 @@ export const Summit = () => {
                  </ul>
             </Box>
 
-            <PictureBanner title={"Exhibitions"}/>
+            <PictureBanner title={"Exhibitions"} bannerPicture={dam}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3,pt:0, textAlign:"justify"}}>
               <p>
               Business operators including small and medium enterprises will be offered an opportunity to display their products and communicate their ideas to a new audience. Included in this component are B2B meetings and exhibitions. Excursions
@@ -165,7 +135,7 @@ export const Summit = () => {
                 <li>Find strategic partners for your business.</li>
               </ul>
             </Box>
-            <PictureBanner title={"Strategic Partners and Stakeholders"}/>
+            <PictureBanner title={"Strategic Partners and Stakeholders"} bannerPicture={houses}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3,pt:0, textAlign:"justify"}}>
               {stakeHolders.map((item,index)=>(
                 <Box key={index}>

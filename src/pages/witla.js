@@ -3,61 +3,24 @@ import React from 'react'
 import { DefaultNav } from '../components/Navbars/DefaultNav'
 import { Banner } from '../components/banner.js'
 import useIsDesktop from '../hooks/Device'
-import { useNavigate } from 'react-router-dom'
-import MSU from "../Assets/lekhowa.png" 
-import exhibition from "../Assets/exhibitions.jpg"
-import komecaves from "../Assets/msu.JPG"
+// import { useNavigate } from 'react-router-dom'
 import { Footer } from '../components/footer'
+import  Walpaper from '../Assets/traditional.jpeg'
+import  pictureBannerWalpaper from '../Assets/melamu.jpeg'
+import { PictureBanner } from '../components/pictureBanner'
 
 export const Witla = () => {
   const isDesktop = useIsDesktop()
-  const navigate = useNavigate()
-  const handleSummit = () => {
-    navigate("/summit")
-  }
+  // const navigate = useNavigate()
+  // const handleSummit = () => {
+  //   navigate("/summit")
+  // }
   return (
     <Box>
         <DefaultNav />
-        <Banner />
+        <Banner wallpaper={Walpaper}/>
         <Box>
-        <div style={isDesktop ? { position: 'relative', height:"200px", width:"100%"} : { position: 'relative', height:"100px", width:"100%"}}>
-                <img
-                    src={MSU}
-                    alt="Background"
-                    style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    position: 'absolute',
-                    zIndex: -1,
-                    top: 0,
-                    left: 0,
-                    }}
-                />
-                <Box
-                    sx={
-                    isDesktop ?    
-                    {
-                    backgroundColor: 'rgba(0, 0, 255, 0.19)', // Adjust the color and opacity
-                    padding: '20px', // Add any other styling you need
-                    height:"80%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center"
-                    }:
-                    {
-                    backgroundColor: 'rgba(0, 0, 255, 0.19)', // Adjust the color and opacity
-                    padding: '20px', // Add any other styling you need
-                    height:"60%",
-                    display:"flex",
-                    justifyContent:"center",
-                    alignItems:"center"
-                    }
-                    }
-                >
-                    <h4 style={isDesktop ? {color:'white', fontSize:50} : {color:'white', fontSize:30}}>ABOUTWITLA</h4>
-                </Box>
-            </div>
+            <PictureBanner title={"ABOUT WITLA"} bannerPicture={pictureBannerWalpaper}/>
             <Box sx={isDesktop ? {pl:20,pr:20, pt:3, pb:3,fontSize:30, textAlign:"justify"} : {p:3, textAlign:"justify"}}>
                 <p>
                  <b>Indroduction</b>

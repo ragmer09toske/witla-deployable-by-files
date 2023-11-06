@@ -1,14 +1,24 @@
-import { Box, Card, Divider, Typography } from '@mui/material'
-import React from 'react'
-import bg from "../../Assets/Wallpapers/nucleus-malesunyane.jpg"
+import { Box, Card, Divider } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import bg from "../../Assets/two.jpeg"
 import useIsDesktop from '../../hooks/Device'
 import { useNavigate } from 'react-router-dom'
-export const Banner = () => {
+
+export const Banner = ({wallpaper}) => {
   const isDesktop = useIsDesktop()
   const navigate = useNavigate()
   const handleRegister = () => {
     navigate("/register")
   }
+  const [smallDevice, setSmallDeivce] = useState()
+  useEffect(()=>{
+    if(window.innerWidth <= 360){
+        setSmallDeivce(true)
+        console.log("small decice set on")
+    }
+  },[smallDevice])
+  const currentWidth = window.innerWidth
+  console.log(currentWidth)
   return (
     <Card
         sx={{
@@ -28,13 +38,14 @@ export const Banner = () => {
             }}
         >
         </Box>
-        <img src={bg} style={{ width: '100%', height: '100%', objectFit: 'cover' }}></img>
+        <img src={!wallpaper ? (bg) : (wallpaper) } style={{ width: '100%', height: '100%', objectFit: 'cover' }} alt='nucleus-bg'></img>
         <Box sx={{
             position: 'absolute',
             top: isDesktop ? "50%" : "50%",
             width: "100%",
             mt:{xs: -20},
         }}>
+            {!smallDevice && (
             <Box sx={{display: "flex", p:2, pl:3.5}}>
                 <Box sx={ isDesktop ? {display:"flex", alignItems:"baseline", mt:-4.5 } : {display:"flex", alignItems:"baseline"}}>
                     <Box>
@@ -57,9 +68,32 @@ export const Banner = () => {
                     </Box>
                 </Box>
             </Box>
-            <Box sx={{mt:-12, color: "#fff", pl:4, pr:5, fontWeight:"300"}}>
+            )}
+            {smallDevice && 
+            <Box sx={{display: "flex",alignItems:"center" ,p:2, pl:3.5, gap: 1}}>
+               <Box>
+                   <Box>
+                       <h1 style={{fontSize: 85, color:"#ad920b"}} className='orbitron'>
+                           2<span style={{fontSize: 40, color:"#ad920b"}}>ND</span>
+                       </h1>
+                   </Box>
+               </Box>
+               <Box>
+                   <Box>
+                       <h5 style={isDesktop ? {fontSize: 30, color:"#bc0026"} : {fontSize: 20, color:"#bc0026"} } className='orbitron'>WOMAN IN TOURISM SOUTHERN AFRICA</h5>
+                   </Box>
+                   <Box sx={isDesktop ? {mt: -5} :{mt: -3.5} }>
+                       <h5 style={isDesktop ? {fontSize: 20, color:"#bc0026"} : {fontSize: 15, color:"#bc0026"} } className='orbitron'>SUMMIT & EXPO</h5>
+                   </Box>
+               </Box>
+           </Box>
+            }
+            {!smallDevice && (<Box sx={{mt:-12, color: "#fff", pl:4, pr:5, fontWeight:"300"}}>
                 <h4 className='ubuntu'style={isDesktop ? {fontSize: 25} : {fontSize:""}}>THEME:{isDesktop && <br/>} ACCELERATING ECONOMIC GROWTH THROUGH TOURISM VALUE CHAINS</h4>
-            </Box>
+            </Box>)}
+            {smallDevice && (<Box sx={{mt:-9, color: "#fff", pl:4, pr:5, fontWeight:"300"}}>
+                <h4 className='ubuntu'style={isDesktop ? {fontSize: 25} : {fontSize:""}}>THEME:{isDesktop && <br/>} ACCELERATING ECONOMIC GROWTH THROUGH TOURISM VALUE CHAINS</h4>
+            </Box>)}
             {!isDesktop && 
             <Box sx={{pl:4, pr:4}}>
                 <Divider sx={{ background:"#00000f5a"}}/>

@@ -1,4 +1,4 @@
-import { Box, Divider, Typography } from '@mui/material'
+import { Box, Divider} from '@mui/material'
 import React, { useState } from 'react'
 import logo from "../../Assets/Wallpapers/Witla.png"
 import { Close, Menu } from '@mui/icons-material'
@@ -109,7 +109,7 @@ export const MobileNav = () => {
                 pr: 2
             }}>
                 <Box onClick={handleHome}>
-                    <img src={logo} width={80}></img>
+                    <img src={logo} alt='witla' width={80}></img>
                 </Box>
                 <Box>
                     {   !navContentState &&

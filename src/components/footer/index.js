@@ -1,12 +1,23 @@
-import { Email, Facebook, Instagram, Phone, Twitter, YouTube } from '@mui/icons-material'
-import { Box, Divider, Typography } from '@mui/material'
+import { Email, Facebook, Instagram, Phone } from '@mui/icons-material'
+import { Box, Divider } from '@mui/material'
 import kayplayer from "../../Assets/kayplayers.jpeg"
-import Nu_branded from "../../Assets/logo_Typo.png"
+// import Nu_branded from "../../Assets/logo_Typo.png"
+// import TP_branded from "../../Assets/tp.jpg"
+
 import React from 'react'
 
 export const Footer = () => {
-  const handleClick =()=>{
-    window.location.href="https://www.nucleusdevs.com"
+//   const handleClick =()=>{
+//     window.location.href="https://www.nucleusdevs.com"
+//   }
+//   const toNucleus = () => {
+//     window.location.href = "https://www.nucluesdevs.com"
+//   }
+//   const toTP = () => {
+//     window.location.href = "https://www.tp-technologies.co.ls"
+//   }
+  const handleTicktok = () => {
+    window.location.href = "https://ticktock#"
   }
   return (
     <Box sx={{
@@ -70,8 +81,7 @@ export const Footer = () => {
                     justifyContent: "center",
                     gap: 2
                 }}>
-                    <Facebook />
-                    <YouTube />
+                    <Facebook onlcick={handleTicktok}/>
                     <Instagram />
                 </Box>
             </Box>
@@ -83,16 +93,22 @@ export const Footer = () => {
             background: "#2e3190f3",
             height:"100px"
         }}
-        onClick={handleClick}
         >
             <Box sx={{color:"white"}}>
-                <h4>Designed & Developed at</h4>
+            <p>&copy; 2023 witla. All rights reserved.</p>
             </Box>
-            <Box sx={{mt:-3}}>
+            {/* <Box sx={{mt:-1}} onClick={toNucleus}>
                 <img src={Nu_branded} width={100} />
-            </Box>
+            </Box> */}
+            {/* <br/> */}
+            {/* <Box sx={{color:"Black"}}>
+                <h4>In Collaboration With</h4>
+            </Box> */}
+            {/* <Box sx={{mt:-2}} onClick={toTP}>
+                <img src={TP_branded} width={100} />
+            </Box> */}
         </Box>
-        <br/>
+        {/* <br/> */}
     </Box>
   )
 }

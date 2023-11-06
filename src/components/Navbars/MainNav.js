@@ -1,12 +1,12 @@
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
 export const MainNav = () => {
     const navigate = useNavigate()
-    const toHome = () => {
-        navigate("/")
-    }
+    // const toHome = () => {
+    //     navigate("/")
+    // }
     const toWitla = () => {
         navigate("/witla")
     }
@@ -25,6 +25,7 @@ export const MainNav = () => {
     const toPackage = () => {
         navigate("/packages")
     }
+  
   return (
     <Box 
         sx={{
@@ -38,17 +39,20 @@ export const MainNav = () => {
         }}
         className="MainNav"
     >
-        <h4 onClick={toHome} className='ubuntu'>
+        <h4 onClick={toWitla} className='ubuntu'>
             About WITLA
         </h4>
         <h4 onClick={toLesotho} className='ubuntu'>
             About Lesotho
         </h4>
-        <h4 onClick={toWitla} className='ubuntu'>
+        <h4 onClick={toSummit} className='ubuntu'>
             About Conference
         </h4>
+        <h4 onClick={toPackage} className='ubuntu'>
+            Packages
+        </h4>
         <h4 onClick={toContact} className='ubuntu'>
-            About Contact
+            Contact Us
         </h4>
         <h4 onClick={toRegister} className='ubuntu'>
             Register
